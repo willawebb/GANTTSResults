@@ -1,5 +1,5 @@
 # GANTTSResults
-This repository contains the training/testing data, and generated audio.
+This repository contains the edited code and the generated audio, alongside the target samples.
 
 ---
 
