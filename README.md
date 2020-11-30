@@ -22,7 +22,7 @@ I traced this problem to lines 15, 69, and 70 in loss.py, where the "window" var
 
 The training itself was done with the default settings in train.py, though batch-size was adjusted to 16 due to an OoM error. The model was trained off of only 230 samples, speaker p225 from the University of Edinburgh's Centre for Speech Technology Research VCTK Corpus, linked here: https://www.kaggle.com/mfekadu/english-multispeaker-corpus-for-voice-cloning. For training, simply grab that speaker's folder from the kaggle archive and follow yanggeng's steps to process the audio and train the model.
 
-If you have a checkpoint, simply put it in the logdir folder, and create a 'checkpoint' file (no suffix) with "model.chkpt-[NUMBER].pt" written inside. For example, I have left this file filled with "model.ckpt-235000.pt", which will attempt to resume from that checkpoint should that file be there. To use the resume feature, simply add the --resume command when you execute train.py, pointing at "logdir".
+If you have a checkpoint, simply put it in the logdir folder, and create a 'checkpoint' file (no suffix) with "model.chkpt-[NUMBER].pt" written inside. For example, I have left this file filled with "model.ckpt-235000.pt", which will attempt to resume from that checkpoint should that file be there. To use the resume feature, simply add the --resume command when you execute train.py, pointing at "logdir". Generate.py will automatically point at logdir when it attempts to create new generated samples.
 
 ---
 
